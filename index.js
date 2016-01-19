@@ -52,16 +52,16 @@ app.put('/api/products/:id', function(req, res) {
     })
 })
 
-app.delete('/api/products/:id', function(req, res) {
-    var idDeleting = ObjectId(req.params.id);
+// app.delete('/api/products/:id', function(req, res) {
+//     var idDeleting = ObjectId(req.params.id);
     
-    db.cart.remove({_id: idDeleting}, function(err, result) {
-        if(err || result.n === 0) {
-            res.status(500).send('Failed to delete');
-        }
-        res.send(result);
-    })
-})
+//     db.cart.remove({_id: idDeleting}, function(err, result) {
+//         if(err || result.n === 0) {
+//             res.status(500).send('Failed to delete');
+//         }
+//         res.send(result);
+//     })
+// })
 
 
 
